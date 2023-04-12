@@ -1,0 +1,149 @@
+/**
+ * smooth-scroll.js
+ *
+ * Provides smooth scrolling on anchor links
+ *
+ * jQuery is still used opposed to native support for backward compatibility.
+ *
+ * Original code from https://css-tricks.com/snippets/jquery/smooth-scrolling
+ *
+ * Updates made to original:
+ * 1) Anchor protocols also need to match in order to be handled.
+ * 2) FALSE is now returned in all handled cases opposed to only one of them.
+ * 3) Removed '[href="#0"]' exceptional case (why was this even there??).
+ * 4) Enhanced documentation.
+ * 5) Modularized code with configurable scope and delay timer.
+ * 
+ */
+
+/**
+ * See https://developer.wordpress.org/reference/functions/wp_localize_script
+ *
+ * Available properties include:
+ * {
+ *   delay: int
+ *   easing: string
+ *   selector: string
+ * };
+ *
+ * @type object
+ */
+var smooth_scroll_settings = smooth_scroll_settings || {};
+
+(function($) {
+  $(function( ) {
+
+    var selector = smooth_scroll_settings.hasOwnProperty('selector') ?
+      smooth_scroll_settings.selector : 'body';
+
+    // Select any links with a fragment
+    $('a[href*="#"]', $(selector)).not('[href="#"]').on('click', function(event) {
+
+      // Trim off a single leading '/' character (if applicable).
+      var current_path = location.pathname.replace(/^\//, '');
+      var link_path = this.pathname.replace(/^\//, '');
+
+      // Only handle links that:
+      // 1) Are to the same page.
+      // 2) Are to the same host.
+      // 3) Are using the same protocol.
+      if(current_path === link_path && location.host === this.host && location.protocol === this.protocol) {
+
+        var target = $(this.hash);
+
+        if(target.length) {
+
+          // Prevent the browser from following the link.
+          event.preventDefault();
+
+          // Gracefully degrade for older browsers.
+          if(typeof(history) !== 'undefined' && typeof('localStorage') !== 'undefined') {
+            try {
+              history.pushState({}, document.title, this.hash);
+              // IOS Workaround - store the previous Y position...
+              localStorage.setItem('psu-smooth-scroll', JSON.stringify({
+                path: location.pathname,
+                position: window.scrollY
+              }));
+            }
+            catch(e) {
+              // User has local storage disabled?
+            }
+          }
+
+          var scroll_to = target.offset().top;
+
+          // Workaround: Compensate for the mobile menu caused by the overlay
+          // not taking up any height.
+          //
+          // @TODO: When the mobile menu is fixed, refactor this.
+          if(window.innerWidth < 1025) {
+            scroll_to -= 112;
+          }
+
+          var properties = {
+            scrollTop: scroll_to
+          };
+
+          var delay = smooth_scroll_settings.hasOwnProperty('delay') ?
+            parseInt(smooth_scroll_settings.delay) : 1000;
+
+          var easing = smooth_scroll_settings.hasOwnProperty('easing') ?
+            smooth_scroll_settings.easing : 'swing';
+
+          var callback = function() {
+
+            // After animation completes, set focus to the target element.
+            target.focus();
+
+            // If the target was not focusable (IE, a H1 element),
+            // give it a tabindex that won't interfere with the
+            // existing tab order and re-focus it.
+            if( !target.is(':focus') ) {
+                target.attr('tabindex', '-1').focus();
+            }
+          };
+
+          // Scroll to the top of the target element.
+          $( 'html, body' ).animate( properties, delay, easing, callback);
+
+          // Stop event propagation.
+          return false;
+        }
+      }
+    });
+  });
+
+  // Handle cases where a user hits 'back' after clicking on an anchor.
+  if(typeof(localStorage) !== 'undefined') {
+
+    $(window).on('popstate', function() {
+      try {
+
+        var smooth_scroll_settings = null;
+
+        if('psu-smooth-scroll' in localStorage) {
+          var json = localStorage.getItem('psu-smooth-scroll');
+          localStorage.removeItem('psu-smooth-scroll');
+          smooth_scroll_settings = JSON.parse(json);
+        }
+
+        if(!smooth_scroll_settings.hasOwnProperty('path') || !smooth_scroll_settings.hasOwnProperty('position')) {
+          return;
+        }
+
+        if(smooth_scroll_settings.path !== window.location.pathname) {
+          return;
+        }
+
+        this.scrollTop(smooth_scroll_settings.position);
+
+        return false;
+      }
+      catch(e) {
+        // Is local storage turned off?  Did something else mess with the value?
+        // What else can we do but ignore this unfortunate turn of events...?
+      }
+    });
+  }
+})(jQuery);

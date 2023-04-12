@@ -1,0 +1,261 @@
+/* Print Stylesheet */
+@media print {
+	.home main, .category main, .page-template main > article:first-of-type, .page-template-level1-page #primary, .single-post main > article:first-of-type, .page main > article:first-of-type {
+		column-count: 2;
+		column-gap: 40px;
+	}
+	.home .homepage-intro-content-wrapper {
+		padding-top: 0 !important;
+	}
+	main > article:first-of-type > header.entry-header:first-of-type {
+		column-span: all;
+		display: block;
+		margin-bottom: 30px;
+	}
+	.page-template-level1-page .featured-image {
+		display: none;
+	}
+	.page-template-level1-page .content-area.level1-title {
+		margin: 0 0 30px;
+	}
+	.page-template-level1-page .level1-title .entry-header {
+		margin: 0;
+		max-width: none;
+	}
+	.page-template-level1-page .level1-title h1 {
+		font-size: 22px !important;
+		font-weight: 600;
+		line-height: 1.6;
+		letter-spacing: normal !important;
+		background-color: #ffffff !important;
+		color: #000000 !important;
+		box-shadow: none !important;
+		padding: 0;
+		display: block;
+	}
+	.tile-nav .display-posts-listing li.listing-item .image {
+		margin-top: 0;
+	}
+	header.page-header h1 {
+		margin-bottom: 30px !important;
+	}
+	.tag-one-column-print main {
+		column-count: 1;
+		column-gap: 0;
+	}
+	#primary {
+		margin: 0;
+		padding-bottom: 20px;
+	}
+	#masthead .site-title {
+		height: auto !important;
+	}
+	#masthead .psu-logo {
+		display: table-cell;
+		max-width: 265px;
+		vertical-align: top;
+		padding-right: 24px;
+		padding-top: 9px;
+	}
+	.site-logo {
+		display: table-cell;
+		padding-top: 15px;
+	}
+	.site-main .featured-image {
+		margin: 0;
+	}
+	.dual-logos .site-title {
+		height: 100px;
+	}
+	#hero-container, #hero-container .content-area, .slider-image, .homepage-intro-content-wrapper, #legal-footer {
+		background-color: #ffffff !important;
+	}
+	#hero-container .content-area {
+		background-color: transparent;
+		border-bottom: 1px solid #e3e3e8;
+		margin-bottom: 40px;
+	}
+	.homepage-intro-content-wrapper #homepage-intro-sidebar section.widget {
+		padding: 0 16px;
+	}
+	.home #content .widget_homepage-bullets-widget .section-content {
+		padding: 0 16px;
+	}
+	.home .widget_homepage-bullets-widget, .home .widget_homepage-bullets-widget h2, .home .widget_homepage-bullets-widget p {
+		color: #000000 !important;
+		background-color: #ffffff;
+	}
+	.slider-content {
+		padding-top: 0 !important;
+		padding-bottom: 20px;
+	}
+	.slider-content p, .slider-content h2, .slider-content h3, .slider-content h4 {
+		color: #000000 !important;
+	}
+	#hero-list li, .home .widget {
+		background-image: none !important;
+		background-color: #ffffff !important;
+	}
+	#fibonacci,
+	#sidebar-body,
+	#header-search,
+	.header-wrapper,
+	#emergency-announcement,
+	.slider-banner,
+	.slider-readmore,
+	.slider-image,
+	.slider-image img,
+	.all-events-link,
+	.view-more-link,
+	#mobile-wrapper-sticky-wrapper,
+	.breadcrumb-container,
+	nav,
+	.em-search-wrapper,
+	.continue-reading,
+	#statistics,
+	#related,
+	.addtoany_content,
+	#subscribe-footer,
+	#foot-logo,
+	footer .address,
+	footer .footer-social,
+	footer .legal-statements,
+	footer .web-questions,
+	a.back-to-top,
+	.call-to-action,
+	.subtle-call-to-action,
+	form,
+	.continue-reading-gray-single,
+	#comments {
+		display: none !important;
+	}
+	.foot-container {
+		margin: 0;
+		padding-top: 20px;
+		border-top: 1px solid #cccccc;
+	}
+	.site-footer {
+		background-color: #ffffff !important;
+		background-image: none !important;
+		padding: 0 16px !important;
+	}
+	.site-footer h2 {
+		margin: 0;
+	}
+	footer .legal-text {
+		margin: 0;
+	}
+	#page p,
+	main p,
+	main div,
+	main li,
+	main td,
+	main th,
+	main span,
+	main a,
+	.site-footer h2,
+	.site-footer p,
+	#legal-footer p,
+	#footer-contact-info a {
+		font-size: 11px !important;
+		color: #000000 !important;
+		line-height: 1.6;
+		text-decoration: none !important;
+	}
+	.call-out-box {
+		padding: 16px;
+		background-color: #f2f3f4 !important;
+		font-size: 85% !important;
+		break-inside: avoid;
+		margin: 0;
+	}
+	.call-out-box h2, .call-out-box h3, .call-out-box h4 {
+		font-size: 13px !important;
+		font-weight: bold !important;
+	}
+	table, .video-container {
+		break-inside: avoid !important;
+		width: 100% !important;
+	}
+	.tile-nav {
+		display: block !important;
+	}
+	li.listing-item {
+		break-inside: avoid !important;
+		display: block !important;
+		margin-bottom: 50px !important;
+		box-shadow: none !important;
+	}
+	li.listing-item img {
+		width: 100%;
+	}
+	.tile-nav .excerpt {
+		padding: 0 !important;
+		font-size: 11px;
+	}
+	.tile-nav a.title, .home .widget_homepage-bullets-widget .homepage-bullet strong {
+		padding: 0 !important;
+		font-size: 12px;
+		font-weight: bold;
+	}
+	.home #content .widget_homepage-bullets-widget li {
+		min-height: 0 !important;
+	}
+	.tag-one-column-print li.listing-item img {
+		width: auto;
+		max-width: 400px;
+	}
+	th {
+		font-weight: bold !important;
+	}
+	th, td {
+		padding: 5px !important;
+	}
+	#primary li {
+		padding: 0 !important;
+	}
+	h1, h1.page-title, h1.entry-title {
+		font-size: 22px !important;
+		font-weight: bold;
+		column-span: all !important;
+	}
+	h2, #primary h2 a, #primary h2 span, caption, h3.slider-title {
+		font-size: 18px !important;
+		font-weight: bold !important;
+	}
+	h3, #primary h3 a, #primary h3 span, caption .h3 {
+		font-size: 16px !important;
+		font-weight: bold !important;
+	}
+	h4, #primary h4 a, #primary h4 span, caption .h4 {
+		font-size: 13px !important;
+		font-weight: bold !important;
+	}
+	.wp-caption-text {
+		font-size: 10px;
+	}
+	img, .wp-caption img[class*="wp-image-"], figure.alignright, figure.alignleft, #primary .alignleft, #primary .alignright {
+		float: none !important;
+		text-align: left !important;
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+		break-inside: avoid !important; 
+		break-after: avoid;
+		display: block !important;
+	}
+	.tag-one-column-print .alignleft {
+		float: left !important;
+		margin: 0 16px 16px 0 !important;
+	}
+	.tag-one-column-print .alignright {
+		float: right !important;
+		margin: 0 0 16px 16px !important;
+	}
+	h1, h2, h3, h4, h5, h6, header.entry-header { 
+		break-after: avoid;
+		color: #000000 !important;
+	}
+	blockquote, pre, .cff-wrapper, #sb_instagram { 
+		break-inside: avoid;
+	}
+}

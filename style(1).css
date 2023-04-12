@@ -1,0 +1,371 @@
+/*
+ Theme Name:     WC Blog - PSUOutreachMarketing
+ Theme URI:      https://blog.worldcampus.psu.edu
+ Description:    Child theme using the PSUOutreachMarketing parent theme
+ Author:         Penn State Outreach and Online Education
+ Author URI:     https://www.outreach.psu.edu
+ Template:       PSUOutreachMarketing
+ Version:        1.6.0
+*/
+
+.home #content .breadcrumb-container {
+  display: block;
+}
+
+/* Site Title */
+#masthead .psu-logo {
+  margin-right: 0;
+}
+#masthead .site-logo a {
+  display: block;
+  color: #1e407c;
+  font-size: 1.625rem;
+  font-weight: 600;
+}
+@media screen and (min-width: 480px) {
+  #masthead .site-logo a {
+    margin: 17px 0 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  #masthead .dual-logos .site-logo {
+    margin-left: 78px;
+  }
+}
+/* Move sidebar to right */
+#sidebar-body {
+  float: right;
+}
+@media screen and (min-width: 1024px) {
+  #main, .site-main {
+    float: left;
+  }
+}
+
+/* Change max image size in blog listings */
+@media screen and (min-width: 640px) {
+  .site-content .index-the-excerpt .featured-image{
+    max-width: 300px;
+  }
+}
+
+/* Make sure call-to-action buttons are same size */
+.home .slides li figure figcaption a {
+  padding: 14px 18px;
+  min-width: 153px;
+}
+#sidebar-body .widget-view-more {
+  padding: 10px 24px;
+}
+
+/* Homepage slider */
+.home .slider-banner {
+  background-color: #272F42;
+}
+@media screen and (min-width: 1024px) {
+  .home .slides li, .home .slides {
+    background-color: transparent;
+  }
+}
+.home .slides li figure figcaption {
+  font-size: 1.625rem;
+  font-weight: 600;
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+}
+.home .slides li figure figcaption p {
+  margin-bottom: 0;
+}
+.home .slides li figure figcaption a {
+  margin-top: 16px;
+}
+@media screen and (min-width: 1232px) {
+  .home .slides li figure figcaption a {
+    margin-top: 24px;
+  }
+}
+
+/* Categories Page Template */
+ul.categories {
+  list-style: none;
+  margin-top: 32px;
+  padding-left: 0;
+}
+@media screen and (min-width: 768px) {
+  ul.categories {
+    column-count: 2;
+    column-gap: 60px;
+  }
+}
+/* Most Popular Page Template */
+#main .top-10-list .hentry {
+  margin: 32px 0 56px;
+}
+
+/* Sidebar Most Popular */
+#sidebar-body .tptn_posts_list_widget {
+  padding-bottom: 0;
+}
+#sidebar-body .tptn_posts_list_widget li {
+  margin: 1em 0;
+}
+#sidebar-body .widget .tptn_date {
+  display: block;
+  color: #0F192D;
+  font-size: 0.875rem;
+}
+
+/* Sidebar Browse Articles By Select Lists */
+.omc_widget_categories {
+  padding-bottom: 16px;
+}
+.omc_widget_archive select, .omc_widget_categories select {
+  height: 43px;
+  margin-right: 1%;
+  width: 81%;
+}
+.omc_widget_archive input[type="button"], .omc_widget_categories input[type="button"] {
+  height: 42px;
+  padding: 0;
+  width: 15%;
+}
+@media screen and (min-width: 768px) {
+  .omc_widget_archive select, .omc_widget_categories select {
+      width: 80%;
+  }
+  .omc_widget_archive input[type="button"], .omc_widget_categories input[type="button"] {
+    width: 16%;
+  }
+}
+
+/* Subscribe Footer - Using Feedburner Form in Our Constant Contact Widget */
+#subscribe-footer input[type="submit"] {
+  border: 0;
+  padding: 16px 48px;
+  border-radius: 65px;
+  width: 100%;
+}
+#subscribe-footer input[type="text"] {
+  margin: 0 0 12px 0;
+  width: 100%;
+}
+@media screen and (min-width: 550px) {
+  #subscribe-footer input  {
+    margin: 0;
+    width: 100%;
+  }
+}
+
+/* Super Footer */
+#colophon .footer-navigation li {
+  border-top: none;
+  margin-bottom: 0;
+}
+#colophon .footer-navigation li a {
+  font-weight: normal;
+}
+#colophon .footer-navigation h2 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+#colophon .footer-navigation .nav-column {
+  margin-top: 24px;
+}
+@media screen and (min-width: 640px) {
+  #colophon .footer-navigation .nav-column {
+    margin-top: 3px;
+  }
+}
+#nav-column-three {
+  display: none;
+}
+#colophon .foot-container .menu li a {
+  padding: 7px 0;
+}
+
+/* Related Posts on Single Post */
+#related {
+  text-align: center;
+  clear: both;
+  background-color: #424e60;
+}
+.related-posts {
+  margin: 0 auto;
+  max-width: 1232px;
+  padding: 24px 16px 50px;
+}
+.related-post {
+  display: inline-block;
+  text-align: left;
+  margin: 0 auto 16px;
+  max-width: 400px;
+  padding: 16px 0;
+  position: relative;
+  vertical-align: top;
+  width: 100%;
+}
+h2.related-header {
+  color: #ffffff;
+  font-size: 1.125rem;
+  margin-bottom: 32px;
+  padding-top: 0;
+  text-align: center;
+}
+.related-post-date {
+  color: #ffffff;
+  font-size: 0.875rem;
+  margin-bottom: 8px;
+}
+.related-post-title a {
+  color: #ffffff;
+  padding-right: 0;
+  text-decoration: none;
+}
+.related-post-title a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+@media screen and (min-width: 768px) {
+  .multiple-results .related-post {
+    padding: 0 24px;
+    width: 32%;
+  }
+  .related-post .entry-content {
+    min-height: 95px;
+  }
+}
+
+/* Added from customizer on 3-18-2022 */
+/* Global Gravity Form Error Message */
+.gform_wrapper li.gfield.gfield_error.gfield_contains_required label.gfield_label {
+  margin-top: 0;
+}
+
+/* Subscribe Gravity Form Footer */
+#subscribe-footer .gform_legacy_markup_wrapper .validation_message {
+  color: #c02b0a;
+  font-weight: 400;
+}
+#subscribe-footer .gform_wrapper .gfield_validation_message, #subscribe-footer .gform_wrapper .validation_message {
+  background: transparent;
+  border: 0;
+}
+#subscribe-footer .gform_validation_errors>h2 .gform-icon {
+  display: none;
+}
+#subscribe-footer .gform_legacy_markup_wrapper div.validation_error {
+  padding: 16px;
+}
+#subscribe-footer .gform_footer, #subscribe-footer .gform_body ul {
+  display: inline;
+}
+#subscribe-footer input[type="submit"] {
+  width: 100%;
+  margin: 16px 0 0;
+  border-radius: 0;
+}
+@media only screen and (min-width: 641px) {
+  #subscribe-footer input[type="submit"] {
+    width: 24%;
+    min-width: 24%;
+  }
+  #subscribe-footer .gform_wrapper .gform_body {
+    display: inline;
+  }
+}
+#subscribe-footer .gform_wrapper li.gfield.gfield_error {
+  border: 0;
+  background-color: transparent;
+}
+#subscribe-footer .gform_wrapper .field_description_below .gfield_description {
+  padding-top: 0;
+}
+@media only screen and (max-width: 641px) {
+  #subscribe-footer .gform_wrapper ul.gform_fields li.gfield.gfield_error+li.gfield.gfield_error {
+    margin-top: 0px;
+  }
+}
+@media only screen and (min-width: 641px) {
+  #subscribe-footer .gform_wrapper ul.gform_fields li.gfield {
+    padding-right: 16px;
+  }
+}
+@media only screen and (max-width: 761px), (max-device-width: 1023px) and (min-device-width: 768px) {
+  #subscribe-footer .gform_wrapper ul.gform_fields li.gfield.gfield_error+li.gfield.gfield_error {
+    margin-top: 16px;
+  }
+}
+#subscribe-footer .gform_wrapper .gform_body .ginput_container_select::before {
+  top: 40%;
+  right: 1px;
+  background-color: #ffffff;
+  padding: 0 8px 0 5px;
+}
+#subscribe-footer .gform_wrapper li.gfield.gfield_error {
+  padding-top: 0;
+}
+#subscribe-footer .gform_wrapper li.gfield.gfield_error.gfield_contains_required div.ginput_container {
+  margin-top: 0;
+}
+
+/* Time Management Calculator */
+#content .gform_wrapper.gravity-theme input,
+#content .gform_wrapper.gravity-theme select {
+  font-size: 16px;
+}
+#gform_wrapper_3 input,
+#gform_wrapper_3 select {
+  text-align: center;
+}
+#gform_wrapper_3 input:read-only {
+  background-color: transparent;
+  font-weight: 600;
+}
+#gform_wrapper_3 p.small {
+  font-size: 0.875rem;
+}
+#gform_wrapper_3 hr {
+  margin: 2em 0 !important;
+}
+#gform_wrapper_3 #field_3_14 {
+  padding-top: 30px;
+  margin-top: 30px;
+  border-top: 1px solid #e3e3e8;
+}
+#gform_wrapper_3 #field_3_14 label,
+#gform_wrapper_3 #field_3_14 input {
+  font-size: 1.625rem;
+}
+#gform_wrapper_3 .gfield_description,
+#gform_wrapper_3 .instruction{
+  font-size: 0.875rem;
+  color: #666666;
+  margin-top: 0;
+}
+#gform_wrapper_3 h2 {
+  font-size: 1.625rem;
+}
+#gform_wrapper_3 p {
+  font-size: 1rem;
+  margin: 0 0 1em !important;
+}
+#gform_wrapper_3 .gfield input.small,
+#gform_wrapper_3 .gfield select.small,
+#gform_wrapper_3 .ginput_container_select {
+  width: 100px;
+}
+@media screen and (min-width: 900px) {
+  #gform_wrapper_3 .top_label div.ginput_container,
+  #gform_wrapper_3 .gfield_description {
+    display: inline;
+    margin-left: 20px;
+  }
+  #gform_wrapper_3 .top_label div.ginput_container {
+    display: inline-block;
+  }
+  #gform_wrapper_3 .gfield_label {
+    min-width: 275px;
+    text-align: right;
+  }
+}

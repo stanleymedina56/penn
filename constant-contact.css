@@ -1,0 +1,112 @@
+/*
+ * Styles for the Constant Contact footer
+ */
+
+/*--------------------------------------------------------------
+# Constant Contact subscribe footer .ctct-subscribe-form
+--------------------------------------------------------------*/
+#subscribe-footer .ctct-subscribe-form div.ctct-form-embed div.ctct-form-defaults,
+#subscribe-footer .ctct-subscribe-form div.ctct-form-embed form.ctct-form-custom input.ctct-form-element {
+  color: #0F192D;
+  font-family: 'Open Sans';
+  font-size: 1.1rem;
+}
+#subscribe-footer .ctct-subscribe-form {
+  background: transparent;
+  margin: 0 auto;
+  max-width: 1224px;
+}
+#subscribe-footer .ctct-subscribe-form .ctct-form-defaults {
+  background-color: transparent;
+}
+#subscribe-footer .ctct-subscribe-form div.ctct-form-field,
+#subscribe-footer .ctct-subscribe-form button.ctct-form-button {
+  display: inline-block;
+  width: 98%;
+  margin: 10px 1%;
+}
+#subscribe-footer .ctct-subscribe-form input,
+#subscribe-footer .ctct-subscribe-form button.ctct-form-button {
+  border: 1px solid #aaa;
+  padding: 0.5em;
+  height: 65px;
+  -webkit-transition: background-color .25s ease-out; 
+  -moz-transition: background-color .25s ease-out; 
+  -o-transition: background-color .25s ease-out; 
+  transition: background-color .25s ease-out;
+  vertical-align: middle;
+}
+#subscribe-footer .ctct-subscribe-form input::placeholder {
+  color: #666666;
+}
+#subscribe-footer .ctct-subscribe-form .ctct-form-field label {
+  color: #0F192D;
+  font-weight: normal;
+  font-size: 0.875rem;
+  margin-bottom: 6px;
+}
+#subscribe-footer .ctct-subscribe-form label#email_address_label_0:after {
+  content: " Address";
+}
+#subscribe-footer .ctct-subscribe-form h2.ctct-form-header,
+#subscribe-footer .ctct-subscribe-form .ctct-form-text,
+#subscribe-footer .ctct-subscribe-form #gdpr_text,
+#subscribe-footer .ctct-subscribe-form .ctct-form-footer,
+#subscribe-footer .ctct-subscribe-form div.ctct-form-embed form.ctct-form-custom .ctct-form-required:before {
+  display: none;
+}
+@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* IE10+ CSS styles go here */
+  #subscribe-footer .ctct-subscribe-form #gdpr_text {
+    display: block;
+  }
+}
+#subscribe-footer .ctct-subscribe-form .ctct-form-success h2.ctct-form-header,
+#subscribe-footer .ctct-subscribe-form .ctct-form-success .ctct-form-text {
+  display: block;
+}
+#subscribe-footer .ctct-subscribe-form #gdpr_text {
+  clear: both;
+  margin: 10px 1% 0;
+}
+#subscribe-footer .ctct-subscribe-form #gdpr_text a {
+  font-weight: normal;
+}
+#subscribe-footer .ctct-subscribe-form div.ctct-form-defaults p.ctct-gdpr-text {
+    font-family: 'Open Sans';
+    font-size: 0.75rem;
+}
+#subscribe-footer .ctct-subscribe-form div.ctct-form-embed div.ctct-form-defaults {
+  padding: 0;
+}
+#subscribe-footer .ctct-subscribe-form div.ctct-form-embed form.ctct-form-custom {
+  min-height: auto;
+}
+#subscribe-footer .ctct-subscribe-form button.ctct-form-button {
+  background-color: #376ad3;
+  border: 0;
+  border-radius: 50px;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+#subscribe-footer .ctct-subscribe-form button.ctct-form-button:hover {
+  background-color: #1e407c;
+}
+@media screen and (min-width: 640px) {
+  #subscribe-footer .ctct-subscribe-form div.ctct-form-field,
+  #subscribe-footer .ctct-subscribe-form button.ctct-form-button {
+    width: 47.5%;
+  }
+  #subscribe-footer .ctct-subscribe-form div.ctct-form-embed form.ctct-form-custom {
+    padding-bottom: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #subscribe-footer .ctct-subscribe-form div.ctct-form-field {
+    width: 25%;
+  }
+  #subscribe-footer .ctct-subscribe-form button.ctct-form-button {
+    width: 15.5%;
+  }
+}
